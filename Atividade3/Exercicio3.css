@@ -1,31 +1,50 @@
 body {
     background-color: black;
-    color: white;
+    color: green;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 24px;
 }
 
 header{
     font-weight: bold;
+    color: white;
+}
+
+h2{
+    color: yellow;
 }
 
 nav {
-    color: green;
+    color: blue;
     float: left;
     width: 100%;
 }
 
 nav ul li {
-    color: green;
+    color: blue;
     display: inline-block;
     margin-right: 20px;
 }
 
 nav ul li a {
-    color: green;
+    color: blue;
     padding: 5px 10px;
 }
 
 nav ul li a:hover {
-    color: blue;
+    color: red;
+}
+
+.indent{
+    text-indent: 3em;
+}
+
+legend::before{
+    color: yellow;
+    content: "✔ ";
+}
+
+div{
+    color: yellow;
+    font-weight: bold;
 }
