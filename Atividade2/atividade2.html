@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Página utilizando forms</title>
+    <link rel="stylesheet" href="Exercicio2.css">
+</head>
+
+<body>
+    <main>
+        <div id="formulario">
+            <form action="">
+                <section>
+                    <fieldset>
+                        <legend>Informações pessoais dos alunos</legend>
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" required size="50" maxlength="50"
+                            pattern="[a-zA-Z]{1,50}" autofocus />
+                        <br>
+                        <br>
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email">
+                        <br>
+                        <br>
+                        <label>Sexo</label>
+                        <br>
+                        <input type="radio" id="masculino" nome="sexo" value="M" checked>
+                        <label>Masculino</label>
+                        <input type="radio" id="feminino" nome="sexo" value="F">
+                        <label>Feminino</label>
+                        <input type="radio" id="outro" name="sexo" value="0">
+                        <label>Outro</label>
+                        <br>
+                        <br>
+                        <label>Passatempos:</label>
+                        <br>
+                        <input type="checkbox" id="passatempo1" name="passatempos" value="Tocar piano">
+                        <label>Tocar piano</label>
+                        <input type="checkbox" id="passatempo2" name="passatempos" value="Jogar videogame">
+                        <label>Jogar videogame</label>
+                        <input type="checkbox" id="passatempo3" name="passatempos" value="Andar de bike">
+                        <label>Andar de bike</label>
+                        <input type="checkbox" id="passatempo4" name="passatempos" value="Estudar japonês">
+                        <label>Estudar japonês</label>
+                        <br>
+                        <br>
+                        <input type="submit" value="Enviar">
+                        <button type="reset">Limpar</button>
+                        <br>
+                        <br>
+                    </fieldset>
+                    <br>
+                    <br>
+                    <fieldset>
+                        <legend>Deixe aqui alguma informação que julgar necessária</legend>
+                        <label>Mensagem</label>
+                        <textarea name="mensagem" id="mensangem" cols="50" rows="5"
+                            placeholder="Digite um texto"></textarea>
+                        <br>
+                        <br>
+                        <label>País</label>
+                        <select name="pais" id="pais">
+                            <option value="">Selecione</option>
+                            <option value="brasil">Brasil</option>
+                            <option value="chile">Chile</option>
+                            <option value="mexico">Mexico</option>
+                            <option value="peru">Peru</option>
+                        </select>
+                        <br>
+                        <br>
+                        <button type="button">Cancelar</button>
+                    </fieldset>
+                </section>
+                <br>
+            </form>
+        </div>
+    </main>
+<footer class="rodape">Página criada na aula de PWEB - Direitos Reservados - 2024</footer>
+</body>
+
+</html>
