@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'MatrixFont';
+    src: url('matrix-code-nfi.ttf');
+}
+
+body {
+    margin: 0;
+    font-family: 'MatrixFont', monospace;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #2C3E50;
+    color: white;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header ul li {
+    margin: 0 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+header ul li:hover {
+    text-decoration: underline;
+}
+
+header input[type="text"] {
+    margin-left: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+header button {
+    background-color: #18BC9C;
+    color: white;
+    padding: 5px 15px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+header button:hover {
+    background-color: #1ABC9C;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+    margin: 0 0 10px;
+}
+
+.card a {
+    text-decoration: none;
+    color: #3498DB;
+    font-weight: bold;
+}
+
+.card a:hover {
+    color: #2980B9;
+}
+
+
+footer {
+    background-color: #2C3E50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
