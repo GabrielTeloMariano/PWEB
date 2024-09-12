@@ -1,0 +1,83 @@
+#primeira {
+	padding: 5px;
+	width: 500px; /* tamanho mais comum usado */
+    height: 500px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+h2{
+    text-align: center;
+    
+}
+
+@media screen and (max-width: 30000px) {
+	#primeira {
+		background-color: green;
+        h2::after{
+            content: 'VERDE';
+            text-align: center;
+        }
+        
+	}
+}
+
+@media screen and (max-width: 2048px) {
+	#primeira {
+		background-color: yellow;
+        h2::after{
+            content: 'AMARELO';
+            text-align: center;
+        }
+	}
+}
+
+@media screen and (max-width: 1920px) {
+	#primeira {
+        background-color: blue;
+        h2::after{
+            content: 'AZUL';
+            text-align: center;
+        }
+	}
+}
+
+@media screen and (max-width: 1366px) {
+	#primeira {
+        background-color: red;
+        h2::after{
+            content: 'VERMELHO';
+            text-align: center;
+        }
+	}
+}
+
+@media screen and (max-width: 1080px) {
+	#primeira {
+        background-color: rgb(247, 4, 198);
+        h2::after{
+            content: 'ROSA PINK';
+            text-align: center;
+        }
+	}
+}
+@media screen and (max-width: 1024px) {
+	#primeira {
+        background-color: orange;
+        h2::after{
+            content: 'LARANJA';
+            text-align: center;
+        }
+	}
+}
+
+@media screen and (max-width: 768px) {
+	#primeira {
+        background-color: greenyellow;
+        h2::after{
+            content: 'VERDE LIMÃO';
+            text-align: center;
+        }
+	}
+}
