@@ -1,4 +1,4 @@
-function media (){
+function media() {
     var nome = prompt("Digite seu nome:");
     var nota1 = parseFloat(prompt("Digite a nota 1: "));
     var nota2 = parseFloat(prompt("Digite a nota 2: "));
@@ -9,9 +9,26 @@ function media (){
     alert("Sua média, " + nome + ", é: " + media);
 }
 
-function operacoes(){
-    var num1 = parseFloat(prompt("Digite o primeiro número: "));
-    var num2 = parseFloat(prompt("Digite o segundo número: "));
+function operacoes() {
+    saida = false;
+    while (!saida) {
+        var num1 = parseFloat(prompt("Digite o primeiro número: "));
+        if (!num1) {
+            alert("Digite um número")
+        }
+        else saida = true;
+    }
+
+    saida = false;
+    while (!saida) {
+        var num2 = parseFloat(prompt("Digite o segundo número: "));
+        if (!num2) {
+            alert("Digite um número")
+        }
+        else saida = true;
+    }
+    
+
     var soma = num1 + num2;
     var subtracao = num1 - num2;
     var multiplicacao = num1 * num2;
