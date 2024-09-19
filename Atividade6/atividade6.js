@@ -6,7 +6,7 @@ function media (){
     var nota4 =prompt("Digite a nota 4: ");
 
     var media = (parseFloat(nota1) + parseFloat(nota2) + parseFloat(nota3) + parseFloat(nota4)) / 4;
-    alert("Sua média e: " + media);
+    alert("Sua média, " + nome + ", é: " + media);
 }
 
 function operacoes(){
