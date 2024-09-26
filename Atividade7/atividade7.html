@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="atividade7.js"></script>
+    <link rel="stylesheet" href="atividade7.css">
+    <title>Jan Ken Pon</title>
+</head>
+<script>
+    function jogo(jogoUser){
+
+    var jogoPC = Math.floor(Math.random() * 3);
+
+    if(jogoPC == 0){
+        alert("O PC escolheu pedra!");
+        if(jogoUser == "pedra"){
+            alert("Empate!");
+        }else if(jogoUser == "papel"){
+            alert("Você ganhou!");
+        }else if(jogoUser == "tesoura"){
+            alert("Você perdeu!");
+        }   
+    }else if(jogoPC == 1){
+        alert("O PC escolheu papel!");
+        if(jogoUser == "pedra"){
+            alert("Você perdeu!");
+        }else if(jogoUser == "papel"){
+            alert("Empate!");
+        }else if(jogoUser == "tesoura"){
+            alert("Você ganhou!");
+        }    
+    }else if(jogoPC == 2){
+        alert("O PC escolheu tesoura!");
+        if(jogoUser == "pedra"){
+            alert("Você ganhou!");
+        }else if(jogoUser == "papel"){
+            alert("Você perdeu!");
+        }else if(jogoUser == "tesoura"){
+            alert("Empate!");
+        }
+    }
+}
+</script>
+
+<body>
+    <h1>Pedra, Papel ou Tesoura</h1>
+    <p>Escolha uma opção:</p>
+    <button onclick="jogo('pedra')">Pedra</button>
+    <button onclick="jogo('papel')">Papel</button>
+    <button onclick="jogo('tesoura')">Tesoura</button>
+
+</body>
+
+</html>
