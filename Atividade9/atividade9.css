@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Garante que os itens estejam em uma coluna */
+    gap: 20px; /* Espaçamento entre os elementos */
+}
+
+h1 {
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffeb3b;
+    text-align: left; /* Alinha o título à esquerda */
+}
+
+select, button {
+    width: 100%; /* Ocupa toda a largura disponível */
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    font-size: 18px;
+    outline: none;
+    transition: all 0.3s ease;
+    display: block; /* Garante que eles fiquem em bloco e não lado a lado */
+}
+
+select {
+    background-color: #ffeb3b;
+    color: black;
+    cursor: pointer;
+}
+
+select:hover {
+    background-color: #fdd835;
+}
+
+button {
+    background-color: #ff5722;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #e64a19;
+    transform: scale(1.05);
+}
+
+#result {
+    font-size: 20px;
+    color: #ffeb3b;
+    letter-spacing: 1px;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    select, button {
+        font-size: 16px;
+    }
+
+    #result {
+        font-size: 18px;
+    }
+}
