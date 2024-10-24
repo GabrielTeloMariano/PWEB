@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 13</title>
+    <style>
+        img {
+            width: 500px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="status">Janela Fechada</h1>
+    <img id="janela" src="janelaFechada.jpg" alt="Janela Fechada">
+
+    <script>
+        const imgJanela = document.getElementById('janela');
+        const statusJanela = document.getElementById('status');
+
+        imgJanela.addEventListener('mouseover', () => {
+            imgJanela.src = 'janelaAberta.jfif';
+            statusJanela.textContent = 'Janela Aberta';
+        });
+
+        imgJanela.addEventListener('mouseout', () => {
+            imgJanela.src = 'janelaFechada.jpg';
+            statusJanela.textContent = 'Janela Fechada';
+        });
+
+        imgJanela.addEventListener('click', () => {
+            imgJanela.src = 'janelaQuebrada.jpg';
+            statusJanela.textContent = 'Janela Quebrada';
+        });
+    </script>
+</body>
+</html>

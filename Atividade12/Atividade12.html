@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang=pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 12</title>
+</head>
+
+<body>
+
+    <script>
+        class Retangulo {
+            constructor (x, y) {
+                this.x = parseFloat(x);
+                this.y = parseFloat(y);                
+            }
+
+            calcAreaRet () {
+                if (isNaN(this.x) || isNaN(this.y)) {
+                    alert('Por favor, insira valores numéricos');
+                    return;
+                }
+                else if (this.x <= 0 || this.y <= 0) {
+                    alert('Por favor, insira valores positivos');
+                    return;
+                }
+
+                alert(`A área do retângulo é: ${this.x * this.y}`);
+
+                return (this.x * this.y);
+            }
+        }
+
+        function calcular() {
+            var x = document.getElementById("x").value;
+            var y = document.getElementById("y").value;
+            var retangulo = new Retangulo(x, y);
+            retangulo.calcAreaRet();
+        }
+
+        // conta
+
+        class Conta {
+            constructor (nomeCorrentista, banco, numConta, saldo) {
+                this.nomeCorrentista = nomeCorrentista;
+                this.banco = banco;
+                this.numConta = numConta;
+                this.saldo = saldo;
+            }
+            
+            getNomeCorrentista () {
+                return this.nomeCorrentista;
+            }
+            setNomeCorrentista (nomeCorrentista) {
+                this.nomeCorrentista = nomeCorrentista;
+            }
+            getBanco () {
+                return this.banco;
+            }
+            setBanco (banco) {
+                this.banco = banco;
+            }
+            getNumConta () {
+                return this.numConta;
+            }
+            setNumConta (numConta) {
+                this.numConta = numConta;
+            }
+            getSaldo () {
+                return this.saldo;
+            }
+            setSaldo (saldo) {
+                this.saldo = this.saldo;
+            }
+        }
+
+        class Corrente extends Conta {
+            constructor (nomeCorrentista, banco, numConta, saldo, saldoEspecial) {
+                super (nomeCorrentista, banco, numConta, saldo);
+                this.saldoEspecial = saldoEspecial;}
+                getSaldoEspecial () {
+                    return this.saldoEspecial;
+                }
+                setSaldoEspecial (saldoEspecial) {
+                    this.saldoEspecial = saldoEspecial;
+                }
+            }
+        
+            class Poupanca extends Conta {
+                constructor (nomeCorrentista, banco, numConta, saldo, juros, dataVencimento) {
+                    super (nomeCorrentista, banco, numConta, saldo);
+                    this.juros = juros;
+                    this.dataVencimento = dataVencimento;
+                }
+                getJuros () {
+                    return this.juros;
+                }
+                setJuros (juros) {
+                    this.juros = juros;
+                }
+                getDataVencimento () {
+                    return this.dataVencimento;
+                }
+                setDataVencimento (dataVencimento) {
+                    this.dataVencimento = dataVencimento;
+                }
+            }
+
+            function criarContaCorrente () {
+                var nomeCorrentista = document.getElementById("nomeCorrentista").value;
+                var banco = document.getElementById("banco").value;
+                var numConta = document.getElementById("numeroConta").value;
+                var saldo = document.getElementById("saldo").value;
+                var saldoEspecial = document.getElementById("saldoEspecial").value;
+                var contaCorrente = new Corrente (nomeCorrentista, banco, numConta, saldo, saldoEspecial);
+                alert (`nome: ${contaCorrente.getNomeCorrentista()}
+                numConta: ${contaCorrente.getNumConta()}
+                Saldo: ${contaCorrente.getSaldo()}
+                Saldo Especial: ${contaCorrente.getSaldoEspecial()}`);
+            }
+
+            function criarContaPoupanca () {
+                var nomeCorrentista = document.getElementById("nomeCorrentista").value;
+                var banco = document.getElementById("banco").value;
+                var numConta = document.getElementById("numeroConta").value;
+                var saldo = document.getElementById("saldo").value;
+                var juros = document.getElementById("juros").value;
+                var dataVencimento = document.getElementById("dataVencimento").value;
+                var contaPoupanca = new Poupanca (nomeCorrentista, banco, numConta, saldo, juros, dataVencimento);
+                alert (`nome: ${contaPoupanca.getNomeCorrentista()}
+                banco: ${contaPoupanca.getBanco()}
+                numConta: ${contaPoupanca.getNumConta()}
+                Saldo: ${contaPoupanca.getSaldo()}
+                Juros: ${contaPoupanca.getJuros()}
+                Data de Vencimento: ${contaPoupanca.getDataVencimento()}`);
+            }
+        
+    </script>
+
+    <br>
+    <input type="text" id="x" placeholder="Digite a altura">
+    <br>
+    <br>
+    <input type="text" id="y" placeholder="Digite a largura">
+    <br>
+    <button onclick="calcular()">Calcular Area do retângulo</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <form id="formConta">
+        <label>Nome Correntista: <input type="text" id="nomeCorrentista" required></label><br><br>
+        <label>Banco: <input type="text" id="banco" required></label><br><br>
+        <label>Número da Conta: <input type="text" id="numeroConta" required></label><br><br>
+        <label>Saldo: <input type="number" id="saldo" required></label><br><br>
+        
+        <h2>Conta Corrente</h2>
+        <label>Saldo Especial: <input type="number" id="saldoEspecial" required></label><br><br>
+        
+        <h2>Conta Poupança</h2>
+        <label>Juros: <input type="number" id="juros" step="0.01" required></label><br><br>
+        <label>Data de Vencimento: <input type="date" id="dataVencimento" required></label><br><br>
+
+        <button type="button" onclick="criarContaCorrente()">Criar Conta Corrente</button>
+        <button type="button" onclick="criarContaPoupanca()">Criar Conta Poupança</button>
+
+    </form>
+
+</body>
+
+</html>
